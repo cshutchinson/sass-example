@@ -1,6 +1,23 @@
 /* */
-// generate css file with sass scss/main.scss css/main.css
+// generate css file with $sass scss/main.scss css/main.css
+// to watch and compile $sass --watch scss:css
+
+$borderColor: #ccc; //variable definition
+
 .foo {
   // comments allowed everywhere
   background: orange;
+  border-color: $borderColor; //variable is replaced at transpile time
+  font-size: (12/16)*1em;
+  // & represents the parent element
+  &.block {
+    color:blue;
+  }
+  p {
+    color: blue;
+    font: {
+      size: 2em;
+      weight: bold;
+    }
+  }
 }

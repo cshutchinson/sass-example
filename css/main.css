@@ -1,5 +1,13 @@
 /* */
 .foo {
-  background: orange; }
+  background: orange;
+  border-color: #ccc;
+  font-size: 0.75em; }
+  .foo.block {
+    color: blue; }
+  .foo p {
+    color: blue;
+    font-size: 2em;
+    font-weight: bold; }
 
 /*# sourceMappingURL=main.css.map */
