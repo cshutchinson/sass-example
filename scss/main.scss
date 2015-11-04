@@ -1,12 +1,18 @@
 /* */
 // generate css file with $sass scss/main.scss css/main.css
-// to watch and compile $sass --watch scss:css
+// to watch and compile $sass --watch scss:css  files starting with _ aren't watched
 
 $borderColor: #ccc; //variable definition
+@mixin dialog-box($b){  //parameter can be any $<name>
+  border: 10px solid $b; //reference parameter to used what was passed when @include called
+  padding: 10px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
 
 .foo {
   // comments allowed everywhere
   background: orange;
+  @include dialog-box(green);
   border-color: $borderColor; //variable is replaced at transpile time
   font-size: (12/16)*1em;
   // & represents the parent element
